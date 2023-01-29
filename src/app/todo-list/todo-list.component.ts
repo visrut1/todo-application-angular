@@ -10,4 +10,9 @@ export class TodoListComponent {
   @Input() todos: ITodo[] = [];
 
   constructor() {}
+
+  deleteTodoInList(todo: ITodo) {
+    const index = this.todos.indexOf(todo);
+    this.todos.splice(index, 1);
+  }
 }

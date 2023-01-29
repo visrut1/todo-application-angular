@@ -1,0 +1,12 @@
+.todo-item-row {
+    @apply border-b-2 flex justify-between align-middle;
+}
+
+.btn {
+  @apply bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded;
+  @apply cursor-pointer;
+}
+
+.todo-checkbox {
+  @apply mx-5 w-5 h-5 cursor-pointer outline-none
+}
