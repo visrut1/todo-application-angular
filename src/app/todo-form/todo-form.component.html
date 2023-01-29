@@ -1,0 +1,11 @@
+<form (submit)="onSubmit()" class="todo-form">
+  <input
+    type="text"
+    id="todo-title"
+    name="todo_title"
+    class="text-input"
+    autofocus="on"
+    [(ngModel)]="todo_title"
+  />
+  <button type="submit" class="btn">Add Todo</button>
+</form>
