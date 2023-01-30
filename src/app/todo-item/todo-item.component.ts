@@ -13,4 +13,8 @@ export class TodoItemComponent {
   deleteTodo(todo: ITodo) {
     this.todoDeleteEmitter.emit(todo);
   }
+
+  checkTodo(todo: ITodo) {
+    todo.isCompleted = !todo.isCompleted;
+  }
 }

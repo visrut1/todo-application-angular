@@ -1,7 +1,10 @@
 <div class="todo-item-row">
     <div class="flex items-center text-2xl">
-        <input type="checkbox" class="todo-checkbox"> 
-        <h1>{{ todo.title }}</h1>
+        <input type="checkbox" class="todo-checkbox" (change)="checkTodo(todo)"> 
+        <h1 *ngIf="!todo.isCompleted; else elseBlock">{{ todo.title }}</h1>
+        <ng-template #elseBlock>
+            <h1 style="text-decoration: line-through;">{{ todo.title }}</h1>
+        </ng-template>
     </div>
     <div class="right">
         <button class="btn" (click)="deleteTodo(todo)">Delete</button>
